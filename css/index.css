@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+}
+
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.note-heading {
+    background-color: #ffae00;
+    padding: 20px 10px;
+    color: white;
+}
+
+.note-heading p {
+    font-size: 30px;
+    color: white;
+}
+
+.add-note {
+    width: 170px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid  hsl(41, 100%, 50%);
+    border-radius: 2rem;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    float: right;
+    transition: color 0.4s ease;
+}
+
+.add-note:hover {
+    color: white;
+}
+
+.add-note::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -135px;
+    background-color: hsl(41, 100%, 50%);
+    z-index: -1;
+    border-radius: 2rem;
+    transition: left 0.4s ease;
+}
+
+.add-note:hover::after {
+    left: 0;
+}
+
+.not-add-bar {
+    margin: 20px 15px;
+
+}
+
+.not-add-bar::after {
+    margin-top: 10px;
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.note {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 30px;
+    row-gap: 2rem;
+    margin-top: 8rem;
+    }
+
+.create-note {
+    width: 400px;
+    height: 260px;
+    padding: 15px;
+    min-width:250px;
+    overflow-y: scroll;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
+    border-radius: 20px;
+}
+
+.note-button {
+    margin-bottom: 15px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.note-button button {
+    float: right;
+    padding: 10px;
+    margin-left: 8px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+
+.note-button button:hover {
+    color: red;
+}
+
+.note-button::after {
+    content: '';
+    clear: both;
+    display: block;
+
+}
+
+textarea {
+    width: 371px;
+    height: 174px;
+    /* display: block; */
+    border: none;
+    outline: none;
+
+}
+.main {
+    width: 100%;
+    max-height: 200px;
+    /* display: block; */
+    border: none;
+    outline: none;
+
+}
+.hidden{
+    display: none;
+/* cursor: pointer; */
+}
+
+p {
+    text-wrap: wrap;
+}
+h1 i{
+    margin-right: 10px
+}
